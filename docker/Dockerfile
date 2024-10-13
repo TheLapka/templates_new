@@ -34,6 +34,8 @@ RUN addgroup --system app  \
 RUN chown -R app:app /app
 RUN chown -R app:app /run
 RUN chmod +x /app/docker/entrypoint.sh
+USER app
+WORKDIR /app
 ENTRYPOINT [ "sh", "/app/docker/entrypoint.sh" ]
 
 USER app
