@@ -10,14 +10,18 @@ from apps.shop.models import *
 # 	OrderItem (Элемент заказа в корзине): id, id заказа,
 #   id товара, количество товара в заказе.
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = ("name", "quantity", "price")
 
+
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ("pk" ,"status")
+    list_display = ("pk", "status")
+
 
 class OrderItemAdmin(admin.ModelAdmin):
-    list_display = ("order" ,"product", "quantity")
+    list_display = ("order", "product", "quantity")
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Order, OrderAdmin)

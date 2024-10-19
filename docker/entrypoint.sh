@@ -1,8 +1,8 @@
 #!/bin/sh
 
-echo Starting collecting static
+# echo Starting collecting static
 
-python manage.py collectstatic --noinput || exit 1
+# python manage.py collectstatic --noinput || exit 1
 
 echo Starting migrations
 
